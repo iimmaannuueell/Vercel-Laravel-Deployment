@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,14 @@ Route::get('/flow', function () {
         'data' => null
     ]);
 });
+
+
+Route::get('/flow/:name', function () {
+    return response()->json([
+        'success' => true,
+        'message' => 'flow test',
+        'data' => `The name is flow`
+    ]);
+});
+
+Route::get('/users', [UserController::class, 'index']);
