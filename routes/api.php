@@ -44,4 +44,4 @@ Route::get('/flow/:name', function () {
     ]);
 });
 
-Route::get('/users', [UserController::class, 'index']);
+Route::get('/gigi', [UserController::class, 'index']);
